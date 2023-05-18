@@ -66,15 +66,15 @@ test("Over limit : 4000", function(assert) {
 });
 
 test("Wrong format", function(assert) {
-  assert.propEqual(convertIntegerToRoman(13,5), {value: 0, message: 'Please enter a valid integer', result: false}, "TC-44");
-  assert.propEqual(convertIntegerToRoman(4/2), {value: 0, message: 'Please enter a valid integer', result: false}, "TC-45");
+  assert.propEqual(convertIntegerToRoman("13,5"), {value: 0, message: 'Please enter a valid integer', result: false}, "TC-44");
+  assert.propEqual(convertIntegerToRoman("4/2"), {value: 0, message: 'Please enter a valid integer', result: false}, "TC-45");
   // assert.propEqual(convertRomanToInteger("m"), {value: 0, message: 'Please enter a valid roman', result: false}, "TC-46");
   assert.propEqual(convertIntegerToRoman(-8), {value: 0, message: 'Please enter a valid integer', result: false}, "TC-46");
 });
 
 test("Int instead Roman and Opposite", function(assert) {
   assert.propEqual(convertIntegerToRoman("XV"), {value: 0, message: 'Please enter a valid integer', result: false}, "TC-47");
-  assert.propEqual(convertRomanToInteger(15), {value: 0, message: 'Please enter a valid roman', result: false}, "TC-48");
+  assert.propEqual(convertRomanToInteger("15"), {value: 0, message: 'Please enter a valid roman', result: false}, "TC-48");
 });
 
 test("Wrong roman multiple", function(assert) {
