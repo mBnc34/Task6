@@ -96,6 +96,10 @@ const convertRomanToInteger = function(roman) {
   response.value = sum;
   response.result = true;
 
+  // eslint-disable-next-line no-undef
+   gtag('event', 'convertRomanToInteger', {
+    'IntegerNumber': response
+  });
   return response;
 };
 
